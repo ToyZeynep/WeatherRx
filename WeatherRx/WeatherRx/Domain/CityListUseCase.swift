@@ -13,13 +13,13 @@ import RxCocoa
 
 protocol CityListUseCaseType {
     
-    func getCityList(params: [String: Any]) -> Observable<CityListResponse>
+    func getCityList(params: [String: Any]) -> Observable<[CityListResponse]>
 }
 
 
 struct CityListUseCase: CityListUseCaseType {
    
-    func getCityList(params: [String : Any]) -> Observable<CityListResponse> {
+    func getCityList(params: [String : Any]) -> Observable<[CityListResponse]> {
         return ApiClient.getCityList(params: params)
     }
 }

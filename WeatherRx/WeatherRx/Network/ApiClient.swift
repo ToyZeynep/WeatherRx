@@ -11,7 +11,7 @@ import Alamofire
 
 class ApiClient {
     
-    static func getCityList(params: [String: Any]) -> Observable<CityListResponse> {
+    static func getCityList(params: [String: Any]) -> Observable<[CityListResponse]> {
         return request(ApiEndPoint.cityList(params: params))
     }
 
