@@ -24,6 +24,16 @@ class CityDetailsView : UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    
+    lazy var cityDetailsImageView: UIImageView = {
+       let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.cornerRadius = 10
+        imageView.layer.masksToBounds = true
+        imageView.clipsToBounds = true
+        return imageView
+    }()
 
     lazy var cityDetailsTitleLabel: UILabel = {
         let label = UILabel()

@@ -32,7 +32,7 @@ class CityDetailsViewModelImpl: CityDetailsViewModel, CityDetailsViewModelInput,
     var cityDetails = PublishSubject<[WeatherDetails]>()
     var cityTitle = BehaviorSubject<String>(value: "")
     var cityWoeid =  PublishSubject<Int>()
-    
+    var weatherStateName =  BehaviorSubject<String> (value: "")
     var date =  BehaviorSubject<String> (value: "")
     var tempeture = BehaviorSubject<String> (value: "")
     var wind = BehaviorSubject<String> (value: "")

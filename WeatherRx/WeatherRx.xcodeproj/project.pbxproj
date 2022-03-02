@@ -10,6 +10,7 @@
 		221CD16327CF4D3E001E13CB /* GridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221CD16227CF4D3E001E13CB /* GridFlowLayout.swift */; };
 		221CD16527CF6F24001E13CB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221CD16427CF6F24001E13CB /* Extension.swift */; };
 		221CD16927CF7EF5001E13CB /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221CD16827CF7EF5001E13CB /* DateExtension.swift */; };
+		221CD16B27CFA3F5001E13CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221CD16A27CFA3F5001E13CB /* Constants.swift */; };
 		227AA6D127CE654400B1CA7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227AA6D027CE654400B1CA7A /* AppDelegate.swift */; };
 		227AA6D327CE654400B1CA7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227AA6D227CE654400B1CA7A /* SceneDelegate.swift */; };
 		227AA6DA27CE654500B1CA7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 227AA6D927CE654500B1CA7A /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		221CD16227CF4D3E001E13CB /* GridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridFlowLayout.swift; sourceTree = "<group>"; };
 		221CD16427CF6F24001E13CB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		221CD16827CF7EF5001E13CB /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		221CD16A27CFA3F5001E13CB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		227AA6CD27CE654400B1CA7A /* WeatherRx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherRx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		227AA6D027CE654400B1CA7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		227AA6D227CE654400B1CA7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				221CD16227CF4D3E001E13CB /* GridFlowLayout.swift */,
 				221CD16427CF6F24001E13CB /* Extension.swift */,
 				221CD16827CF7EF5001E13CB /* DateExtension.swift */,
+				221CD16A27CFA3F5001E13CB /* Constants.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				227AA70527CE6A3700B1CA7A /* CityListCell.swift in Sources */,
+				221CD16B27CFA3F5001E13CB /* Constants.swift in Sources */,
 				227AA6EA27CE672E00B1CA7A /* CityDetailsResponse.swift in Sources */,
 				227AA6FF27CE69F000B1CA7A /* CityListViewModel.swift in Sources */,
 				227AA71227CE74A100B1CA7A /* AlertHelper.swift in Sources */,

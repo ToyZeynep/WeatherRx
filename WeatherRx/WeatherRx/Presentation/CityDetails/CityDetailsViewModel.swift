@@ -22,6 +22,7 @@ protocol CityDetailsViewModelOutput {
     var wind : BehaviorSubject<String> { get }
     var humidity : BehaviorSubject<String> { get }
     var weekDay : BehaviorSubject<String> { get }
+    var weatherStateName:  BehaviorSubject<String> { get }
 }
 protocol CityDetailsViewModelStoredProperties {
     var cityDetailsUseCase : CityDetailsUseCase { get }
