@@ -80,6 +80,7 @@ class CityListViewController: UIViewController, BindableType, UICollectionViewDe
         
         } .disposed(by: disposeBag)
         
+        cityListView.cityListCollectionView.rx.modelSelected(CityListResponse.self).bind(to: viewModel.input.selectedCity).disposed(by: disposeBag)
     }
     
     func registerCollectionView() {

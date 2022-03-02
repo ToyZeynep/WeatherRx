@@ -19,7 +19,7 @@ extension CityListView {
         cityListContentView.setBottom(equalTo: bottomAnchor)
         
         setUpToolbarView()
-        setUpMovieListToolBarLineView()
+        setUpCityListToolBarLineView()
         setMovieListCollectionView()
         
     }
@@ -40,7 +40,7 @@ extension CityListView {
         cityListSearchBar.setBottom(equalTo: toolbarView.bottomAnchor)
     }
 
-    func setUpMovieListToolBarLineView() {
+    func setUpCityListToolBarLineView() {
         cityListContentView.addSubview(cityListToolBarLineView)
         cityListToolBarLineView.setTop(equalTo:  toolbarView.bottomAnchor)
         cityListToolBarLineView.setLeft(equalTo: cityListContentView.leftAnchor)

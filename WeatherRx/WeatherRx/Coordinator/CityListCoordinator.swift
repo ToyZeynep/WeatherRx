@@ -14,6 +14,7 @@ import XCoordinator
 enum CityListRoute: Route {
     
     case cityList
+    case cityDetails(city: CityListResponse)
 }
 
 class CityListCoordinator: NavigationCoordinator<CityListRoute> {
@@ -30,7 +31,13 @@ class CityListCoordinator: NavigationCoordinator<CityListRoute> {
             let viewModel = CityListViewModelImpl(router: unownedRouter)
             viewController.bind(to: viewModel)
         return .push(viewController, animation: .default)
-     
+
+              
+        case .cityDetails(let city):
+            let viewController = CityDetailsViewController()
+            let viewModel = CityDetailsViewModelImpl(router: unownedRouter , city: city)
+            viewController.bind(to: viewModel)
+        return .push(viewController, animation: .default)
         }
     }
 }

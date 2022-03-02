@@ -17,7 +17,7 @@ class CityListViewModelImpl: CityListViewModel, CityListViewModelInput, CityList
     
   
 
-  //  private(set) lazy var selectedCity = selectedCityActions.inputs
+    private(set) lazy var selectedCity = selectedCityActions.inputs
 
     let disposeBag = DisposeBag()
 
@@ -26,9 +26,9 @@ class CityListViewModelImpl: CityListViewModel, CityListViewModelInput, CityList
     
     // MARK: -Actions-
 
-//lazy var selectedCityActions = Action<CityListResponse, Void> { [unowned self] city1 in
-//    self.router.rx.trigger(.cityDetail(city: city1))
-//    }
+lazy var selectedCityActions = Action<CityListResponse, Void> { [unowned self] city in
+    self.router.rx.trigger(.cityDetails(city: city))
+    }
 
     // MARK: -Outputs-
     var cityListResponse = PublishSubject<[CityListResponse]>()
@@ -40,7 +40,7 @@ class CityListViewModelImpl: CityListViewModel, CityListViewModelInput, CityList
     private let router: UnownedRouter<CityListRoute>
     // MARK: -Initialization-
     
-  init(router: UnownedRouter<CityListRoute> ) {
+    init(router: UnownedRouter<CityListRoute>) {
   self.router = router
       
   }

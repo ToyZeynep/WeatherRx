@@ -11,7 +11,7 @@ import XCoordinator
 import Action
 protocol CityListViewModelInput {
     
- // var selectedCity: AnyObserver<CityListResponse> { get }
+ var selectedCity: AnyObserver<CityListResponse> { get }
 }
 protocol CityListViewModelOutput {
     var cityListResponse: PublishSubject<[CityListResponse]> { get }
