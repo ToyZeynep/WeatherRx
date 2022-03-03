@@ -11,6 +11,12 @@
 		221CD16527CF6F24001E13CB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221CD16427CF6F24001E13CB /* Extension.swift */; };
 		221CD16927CF7EF5001E13CB /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221CD16827CF7EF5001E13CB /* DateExtension.swift */; };
 		221CD16B27CFA3F5001E13CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221CD16A27CFA3F5001E13CB /* Constants.swift */; };
+		222562B727D0B6F000931B15 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222562B627D0B6F000931B15 /* SplashViewController.swift */; };
+		222562B927D0B80500931B15 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222562B827D0B80500931B15 /* SplashView.swift */; };
+		222562BB27D0B82C00931B15 /* SplashViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222562BA27D0B82C00931B15 /* SplashViewExtension.swift */; };
+		222562BD27D0B86000931B15 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222562BC27D0B86000931B15 /* SplashViewModel.swift */; };
+		222562BF27D0B88C00931B15 /* SplashViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222562BE27D0B88C00931B15 /* SplashViewModelImpl.swift */; };
+		222562C127D0BA1800931B15 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222562C027D0BA1800931B15 /* AppCoordinator.swift */; };
 		227AA6D127CE654400B1CA7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227AA6D027CE654400B1CA7A /* AppDelegate.swift */; };
 		227AA6D327CE654400B1CA7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227AA6D227CE654400B1CA7A /* SceneDelegate.swift */; };
 		227AA6DA27CE654500B1CA7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 227AA6D927CE654500B1CA7A /* Assets.xcassets */; };
@@ -50,6 +56,12 @@
 		221CD16427CF6F24001E13CB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		221CD16827CF7EF5001E13CB /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		221CD16A27CFA3F5001E13CB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		222562B627D0B6F000931B15 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		222562B827D0B80500931B15 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		222562BA27D0B82C00931B15 /* SplashViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewExtension.swift; sourceTree = "<group>"; };
+		222562BC27D0B86000931B15 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		222562BE27D0B88C00931B15 /* SplashViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModelImpl.swift; sourceTree = "<group>"; };
+		222562C027D0BA1800931B15 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		227AA6CD27CE654400B1CA7A /* WeatherRx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherRx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		227AA6D027CE654400B1CA7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		227AA6D227CE654400B1CA7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +112,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		222562B527D0B6D600931B15 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				222562B627D0B6F000931B15 /* SplashViewController.swift */,
+				222562B827D0B80500931B15 /* SplashView.swift */,
+				222562BA27D0B82C00931B15 /* SplashViewExtension.swift */,
+				222562BC27D0B86000931B15 /* SplashViewModel.swift */,
+				222562BE27D0B88C00931B15 /* SplashViewModelImpl.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		227AA6C427CE654400B1CA7A = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				227AA71627CE7EB600B1CA7A /* CityListCoordinator.swift */,
+				222562C027D0BA1800931B15 /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -221,6 +246,7 @@
 		227AA71827CE8FAB00B1CA7A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				222562B527D0B6D600931B15 /* Splash */,
 				227AA6F927CE68F300B1CA7A /* CityList */,
 				227AA71927CE8FBA00B1CA7A /* CityDetails */,
 			);
@@ -372,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				227AA70527CE6A3700B1CA7A /* CityListCell.swift in Sources */,
+				222562BD27D0B86000931B15 /* SplashViewModel.swift in Sources */,
 				221CD16B27CFA3F5001E13CB /* Constants.swift in Sources */,
 				227AA6EA27CE672E00B1CA7A /* CityDetailsResponse.swift in Sources */,
 				227AA6FF27CE69F000B1CA7A /* CityListViewModel.swift in Sources */,
@@ -382,14 +409,17 @@
 				221CD16527CF6F24001E13CB /* Extension.swift in Sources */,
 				227AA71027CE747A00B1CA7A /* ViewExtension.swift in Sources */,
 				227AA72527CE903A00B1CA7A /* CityDetailsCell.swift in Sources */,
+				222562C127D0BA1800931B15 /* AppCoordinator.swift in Sources */,
 				227AA70127CE6A0B00B1CA7A /* CityListViewModelImpl.swift in Sources */,
 				227AA72127CE901800B1CA7A /* CityDetailsViewModelImpl.swift in Sources */,
 				227AA6F827CE680100B1CA7A /* CityDetailsUseCase.swift in Sources */,
 				227AA72727CE904900B1CA7A /* CityDetailsCellExt.swift in Sources */,
 				227AA6F327CE67D900B1CA7A /* ApiClient.swift in Sources */,
 				227AA70C27CE741500B1CA7A /* ListFlowLayOut.swift in Sources */,
+				222562B927D0B80500931B15 /* SplashView.swift in Sources */,
 				227AA71727CE7EB600B1CA7A /* CityListCoordinator.swift in Sources */,
 				227AA70E27CE745800B1CA7A /* BindableType.swift in Sources */,
+				222562B727D0B6F000931B15 /* SplashViewController.swift in Sources */,
 				227AA6EF27CE67AE00B1CA7A /* ApiEndPoints.swift in Sources */,
 				227AA6F127CE67C400B1CA7A /* ApiConfiguration.swift in Sources */,
 				227AA6E827CE671C00B1CA7A /* CityListResponse.swift in Sources */,
@@ -399,10 +429,12 @@
 				227AA71B27CE8FE400B1CA7A /* CityDetailsView.swift in Sources */,
 				227AA6FB27CE69BF00B1CA7A /* CityListView.swift in Sources */,
 				227AA6D127CE654400B1CA7A /* AppDelegate.swift in Sources */,
+				222562BF27D0B88C00931B15 /* SplashViewModelImpl.swift in Sources */,
 				227AA70727CE6A4800B1CA7A /* CityListCellExt.swift in Sources */,
 				221CD16927CF7EF5001E13CB /* DateExtension.swift in Sources */,
 				227AA72327CE902A00B1CA7A /* CityDetailsViewController.swift in Sources */,
 				227AA71D27CE8FF500B1CA7A /* CityDetailsViewExt.swift in Sources */,
+				222562BB27D0B82C00931B15 /* SplashViewExtension.swift in Sources */,
 				227AA70A27CE73EC00B1CA7A /* TransitionExtension.swift in Sources */,
 				227AA6D327CE654400B1CA7A /* SceneDelegate.swift in Sources */,
 			);

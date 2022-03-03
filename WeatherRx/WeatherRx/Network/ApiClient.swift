@@ -19,8 +19,6 @@ class ApiClient {
         return request(ApiEndPoint.cityDetails(params: params))
     }
 
-
-    
     private static func request<T: Codable> (_ urlConvertible: URLRequestConvertible) -> Observable<T> {
 
           //Create an RxSwift observable, which will be the one to call the request when subscribed to
@@ -32,7 +30,6 @@ class ApiClient {
 
                   case .success(let value):
                       //Everything is fine, return the value in onNext
-                    
                       observer.onNext(value)
                       observer.onCompleted()
                   case .failure(let error):

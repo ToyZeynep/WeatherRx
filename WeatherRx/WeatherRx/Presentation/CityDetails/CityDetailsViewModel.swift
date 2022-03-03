@@ -12,6 +12,7 @@ import Action
 protocol CityDetailsViewModelInput {
     
 }
+
 protocol CityDetailsViewModelOutput {
     var cityDetailsResponse: PublishSubject<CityDetailsResponse> { get }
     var cityDetails: PublishSubject<[WeatherDetails]> { get }
@@ -24,6 +25,7 @@ protocol CityDetailsViewModelOutput {
     var weekDay : BehaviorSubject<String> { get }
     var weatherStateName:  BehaviorSubject<String> { get }
 }
+
 protocol CityDetailsViewModelStoredProperties {
     var cityDetailsUseCase : CityDetailsUseCase { get }
     

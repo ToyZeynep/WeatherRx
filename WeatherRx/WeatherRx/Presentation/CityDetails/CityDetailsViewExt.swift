@@ -63,6 +63,7 @@ extension CityDetailsView {
         cityDetailsTempetureLabel.setHeight(height: 50)
     
     }
+    
     func setUpDetailsDateLabel(){
         toolBarView.addSubview(cityDetailsDateLabel)
         cityDetailsDateLabel.setTop(equalTo: cityDetailsTempetureLabel.topAnchor , constant: 50)
@@ -71,6 +72,7 @@ extension CityDetailsView {
         cityDetailsDateLabel.setHeight(height: 50)
     
     }
+    
     func setUpDetailsWeekDayLabel(){
         toolBarView.addSubview(cityDetailsWeekDayLabel)
         cityDetailsWeekDayLabel.setTop(equalTo: cityDetailsDateLabel.topAnchor , constant: 50)
@@ -79,6 +81,7 @@ extension CityDetailsView {
         cityDetailsWeekDayLabel.setHeight(height: 50)
     
     }
+    
     func setUpDetailsHumidityLabel(){
         toolBarView.addSubview(cityDetailsHumidityLabel)
         cityDetailsHumidityLabel.setTop(equalTo: cityDetailsWeekDayLabel.topAnchor , constant: 50)
@@ -87,6 +90,7 @@ extension CityDetailsView {
         cityDetailsHumidityLabel.setHeight(height: 50)
     
     }
+    
     func setUpDetailsWindLabel(){
         toolBarView.addSubview(cityDetailsWindLabel)
         cityDetailsWindLabel.setTop(equalTo: cityDetailsHumidityLabel.topAnchor , constant: 50)

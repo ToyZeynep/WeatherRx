@@ -24,7 +24,7 @@ class CityDetailsViewController: UIViewController, BindableType, UICollectionVie
     var viewModel: CityDetailsViewModel!
     var cityDetails = [WeatherDetails]()
     var gridFlowLayout = GridFlowLayout()
-
+   
         
     
     
@@ -60,13 +60,17 @@ class CityDetailsViewController: UIViewController, BindableType, UICollectionVie
             
         }).disposed(by:disposeBag)
         
+        viewModel.output.weatherStateName.subscribe(onNext: { [weak self] weatherState in
+            self!.setGif(status: weatherState, imageView: self!.cityDetailsView.cityDetailsImageView)
+        }).disposed(by:disposeBag)
+        
         viewModel.output.cityTitle.bind(to: cityDetailsView.cityDetailsTitleLabel.rx.text).disposed(by: disposeBag)
         viewModel.output.date.bind(to: cityDetailsView.cityDetailsDateLabel.rx.text).disposed(by: disposeBag)
         viewModel.output.weekDay.bind(to: cityDetailsView.cityDetailsWeekDayLabel.rx.text).disposed(by: disposeBag)
         viewModel.output.wind.bind(to: cityDetailsView.cityDetailsWindLabel.rx.text).disposed(by: disposeBag)
         viewModel.output.humidity.bind(to: cityDetailsView.cityDetailsHumidityLabel.rx.text).disposed(by: disposeBag)
         viewModel.output.tempeture.bind(to: cityDetailsView.cityDetailsTempetureLabel.rx.text).disposed(by: disposeBag)
-       
+        
         
         viewModel.output.cityDetails.bind(to: cityDetailsView.cityDetailsCollectionView.rx.items(cellIdentifier:cellIdentifier , cellType: CityDetailsCell.self)){[self] _, model, cell in
             setImage(status: model.weather_state_name!, imageView: cell.cityDetailsCellImageView)
@@ -94,6 +98,7 @@ class CityDetailsViewController: UIViewController, BindableType, UICollectionVie
         cityDetailsView.cityDetailsCollectionView.register(CityDetailsCell.self, forCellWithReuseIdentifier: "CityDetailsCell")
         cityDetailsView.cityDetailsCollectionView.collectionViewLayout = gridFlowLayout
     }
+    
     func setImage(status: String , imageView: UIImageView){
         switch status {
         case WeatherStatus.snow.rawValue : imageView.image = UIImage(named: "snow")
@@ -109,12 +114,13 @@ class CityDetailsViewController: UIViewController, BindableType, UICollectionVie
         default: break
         }
     }
+    
     func setGif(status: String , imageView: UIImageView){
         switch status {
         case WeatherStatus.snow.rawValue : imageView.loadGif(asset: "snowGif")
         case WeatherStatus.sleet.rawValue : imageView.loadGif(asset: "sleetGif")
         case WeatherStatus.hail.rawValue : imageView.loadGif(asset: "hailGif")
-        case WeatherStatus.thunderstorm.rawValue : imageView.loadGif(asset: "thunderstormsGif")
+        case WeatherStatus.thunderstorm.rawValue : imageView.loadGif(asset: "thunderGif")
         case WeatherStatus.showers.rawValue : imageView.loadGif(asset: "showersGif")
         case WeatherStatus.heavyRain.rawValue : imageView.loadGif(asset: "heavyRainGif")
         case WeatherStatus.lightRain.rawValue : imageView.loadGif(asset: "lightRainGif")

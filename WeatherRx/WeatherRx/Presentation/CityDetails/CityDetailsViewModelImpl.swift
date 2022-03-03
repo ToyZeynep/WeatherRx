@@ -14,10 +14,6 @@ import Action
 
 class CityDetailsViewModelImpl: CityDetailsViewModel, CityDetailsViewModelInput, CityDetailsViewModelOutput, CityDetailsViewModelStoredProperties {
     
-    
-    
-    
-    
     let disposeBag = DisposeBag()
     
     // MARK: -Inputs-
@@ -25,7 +21,6 @@ class CityDetailsViewModelImpl: CityDetailsViewModel, CityDetailsViewModelInput,
     
     // MARK: -Actions-
     
-
     
     // MARK: -Outputs-
     var cityDetailsResponse = PublishSubject<CityDetailsResponse>()
@@ -76,6 +71,7 @@ class CityDetailsViewModelImpl: CityDetailsViewModel, CityDetailsViewModelInput,
         wind.onNext((model.wind_speed?.toString())! + " m/s")
         humidity.onNext("% " + (model.humidity?.toString())!)
         weekDay.onNext((model.applicable_date?.toDateString(dateFormatter: dateFormatter, outputFormat: "EEEE"))!)
+        weatherStateName.onNext(model.weather_state_name!)
     }
 }
 
