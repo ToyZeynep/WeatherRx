@@ -37,10 +37,10 @@ lazy var selectedCityActions = Action<CityListResponse, Void> { [unowned self] c
     // MARK: -Stored properties-
     
     var cityListUseCase = CityListUseCase()
-    private let router: UnownedRouter<CityListRoute>
+    private let router: UnownedRouter<AppRoute>
     // MARK: -Initialization-
     
-    init(router: UnownedRouter<CityListRoute>) {
+    init(router: UnownedRouter<AppRoute>) {
   self.router = router
       
   }

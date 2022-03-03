@@ -37,11 +37,11 @@ class CityDetailsViewModelImpl: CityDetailsViewModel, CityDetailsViewModelInput,
     
     private let city: CityListResponse
     var cityDetailsUseCase = CityDetailsUseCase()
-    private let router: UnownedRouter<CityListRoute>
+    private let router: UnownedRouter<AppRoute>
     
     // MARK: -Initialization-
     
-    init(router: UnownedRouter<CityListRoute> , city: CityListResponse) {
+    init(router: UnownedRouter<AppRoute> , city: CityListResponse) {
         self.router = router
         self.city = city
         cityTitle.onNext(city.title!)

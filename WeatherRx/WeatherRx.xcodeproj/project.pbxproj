@@ -40,7 +40,6 @@
 		227AA70E27CE745800B1CA7A /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227AA70D27CE745800B1CA7A /* BindableType.swift */; };
 		227AA71027CE747A00B1CA7A /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227AA70F27CE747A00B1CA7A /* ViewExtension.swift */; };
 		227AA71227CE74A100B1CA7A /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227AA71127CE74A100B1CA7A /* AlertHelper.swift */; };
-		227AA71727CE7EB600B1CA7A /* CityListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227AA71627CE7EB600B1CA7A /* CityListCoordinator.swift */; };
 		227AA71B27CE8FE400B1CA7A /* CityDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227AA71A27CE8FE400B1CA7A /* CityDetailsView.swift */; };
 		227AA71D27CE8FF500B1CA7A /* CityDetailsViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227AA71C27CE8FF500B1CA7A /* CityDetailsViewExt.swift */; };
 		227AA71F27CE900800B1CA7A /* CityDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227AA71E27CE900800B1CA7A /* CityDetailsViewModel.swift */; };
@@ -87,7 +86,6 @@
 		227AA70D27CE745800B1CA7A /* BindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
 		227AA70F27CE747A00B1CA7A /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		227AA71127CE74A100B1CA7A /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
-		227AA71627CE7EB600B1CA7A /* CityListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListCoordinator.swift; sourceTree = "<group>"; };
 		227AA71A27CE8FE400B1CA7A /* CityDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailsView.swift; sourceTree = "<group>"; };
 		227AA71C27CE8FF500B1CA7A /* CityDetailsViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailsViewExt.swift; sourceTree = "<group>"; };
 		227AA71E27CE900800B1CA7A /* CityDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailsViewModel.swift; sourceTree = "<group>"; };
@@ -237,7 +235,6 @@
 		227AA71327CE7DE900B1CA7A /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				227AA71627CE7EB600B1CA7A /* CityListCoordinator.swift */,
 				222562C027D0BA1800931B15 /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
@@ -417,7 +414,6 @@
 				227AA6F327CE67D900B1CA7A /* ApiClient.swift in Sources */,
 				227AA70C27CE741500B1CA7A /* ListFlowLayOut.swift in Sources */,
 				222562B927D0B80500931B15 /* SplashView.swift in Sources */,
-				227AA71727CE7EB600B1CA7A /* CityListCoordinator.swift in Sources */,
 				227AA70E27CE745800B1CA7A /* BindableType.swift in Sources */,
 				222562B727D0B6F000931B15 /* SplashViewController.swift in Sources */,
 				227AA6EF27CE67AE00B1CA7A /* ApiEndPoints.swift in Sources */,
