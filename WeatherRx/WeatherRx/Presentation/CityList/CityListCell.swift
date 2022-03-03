@@ -42,8 +42,8 @@ class CityListCell: UICollectionViewCell {
     lazy var cityListCellNameLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 25)
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 35)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

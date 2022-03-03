@@ -44,7 +44,6 @@ class AppCoordinator: NavigationCoordinator<AppRoute> {
              let viewModel = CityDetailsViewModelImpl(router: unownedRouter , city: city)
              viewController.bind(to: viewModel)
          return .push(viewController, animation: .default)
-    
             
         }
     }

@@ -26,7 +26,7 @@ class CityListViewController: UIViewController, BindableType, UICollectionViewDe
     var cityList = [CityListResponse]()
     var listFlowLayout = ListFlowLayout()
     let locationManager = CLLocationManager()
-
+    let imagesArr = [URLString.image0.rawValue , URLString.image16.rawValue ,URLString.image1.rawValue ,URLString.image2.rawValue,URLString.image3.rawValue, URLString.image12.rawValue, URLString.image4.rawValue,URLString.image5.rawValue,URLString.image6.rawValue,  URLString.image13.rawValue ,URLString.image7.rawValue,URLString.image8.rawValue , URLString.image9.rawValue, URLString.image10.rawValue , URLString.image11.rawValue, URLString.image14.rawValue , URLString.image15.rawValue]
     
     var coordinates = "" {
         didSet {
@@ -35,7 +35,16 @@ class CityListViewController: UIViewController, BindableType, UICollectionViewDe
             params["lattlong"] = coordinates
             viewModel.fetchCityList(params: params)
         }
-        
+    }
+    
+    var counter = 0{
+        didSet{
+            if counter == 17{
+                counter = 0
+            }else{
+                
+            }
+        }
     }
     
     override func loadView() {
@@ -67,17 +76,16 @@ class CityListViewController: UIViewController, BindableType, UICollectionViewDe
     
     func bindViewModel() {
         
-        
         viewModel.output.cityListResponse.subscribe(onNext: { response in
             self.cityList.append(contentsOf: response)
             self.viewModel.output.cityList.onNext(self.cityList)
         }).disposed(by: disposeBag)
         
-        viewModel.output.cityList.bind(to: cityListView.cityListCollectionView.rx.items(cellIdentifier: cellIdentifier,cellType: CityListCell.self)) { _, model, cell in
+        viewModel.output.cityList.bind(to: cityListView.cityListCollectionView.rx.items(cellIdentifier: cellIdentifier,cellType: CityListCell.self)) { [self] _, model, cell in
             
             cell.cityListCellNameLabel.text = model.title
-            cell.cityListCellImageView.kf.setImage(with: URL(string: ""))
-        
+            cell.cityListCellImageView.kf.setImage(with: URL(string: imagesArr[self.counter]))
+            counter = counter + 1
         } .disposed(by: disposeBag)
         
         cityListView.cityListCollectionView.rx.modelSelected(CityListResponse.self).bind(to: viewModel.input.selectedCity).disposed(by: disposeBag)
@@ -131,11 +139,10 @@ extension CityListViewController: CLLocationManagerDelegate{
         let lat = userLocation.coordinate.latitude
         let long = userLocation.coordinate.longitude
         self.coordinates = "\(lat),\(long)"
-        print(coordinates)
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Location Error: ", error)
+        // print("Location Error: ", error)
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
@@ -159,7 +166,7 @@ extension CityListViewController : UISearchBarDelegate {
             var params: [String: Any] = [String: Any]()
             params["lattlong"] = coordinates
             viewModel?.fetchCityList(params: params)
-          
+            
         } else {
             search(searchText: searchText)
         }

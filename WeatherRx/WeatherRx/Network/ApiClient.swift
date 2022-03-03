@@ -34,11 +34,7 @@ class ApiClient {
                       observer.onCompleted()
                   case .failure(let error):
                       //Something went wrong, switch on the status code and return the error
-                      print(response.response)
-                      print(response.data)
-                      print(response.description)
-                      print(error.errorDescription)
-                      print("test")
+                    
                       observer.onError(error)
                       observer.onCompleted()
                   }

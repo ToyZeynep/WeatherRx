@@ -13,23 +13,20 @@ import Action
 
 
 class CityListViewModelImpl: CityListViewModel, CityListViewModelInput, CityListViewModelOutput, CityListViewModelStoredProperties {
-
     
-  
-
     private(set) lazy var selectedCity = selectedCityActions.inputs
-
+    
     let disposeBag = DisposeBag()
-
+    
     // MARK: -Inputs-
-
+    
     
     // MARK: -Actions-
-
-lazy var selectedCityActions = Action<CityListResponse, Void> { [unowned self] city in
-    self.router.rx.trigger(.cityDetails(city: city))
+    
+    lazy var selectedCityActions = Action<CityListResponse, Void> { [unowned self] city in
+        self.router.rx.trigger(.cityDetails(city: city))
     }
-
+    
     // MARK: -Outputs-
     var cityListResponse = PublishSubject<[CityListResponse]>()
     var cityList = PublishSubject<[CityListResponse]>()
@@ -41,18 +38,15 @@ lazy var selectedCityActions = Action<CityListResponse, Void> { [unowned self] c
     // MARK: -Initialization-
     
     init(router: UnownedRouter<AppRoute>) {
-  self.router = router
-      
-  }
-        
+        self.router = router
+    }
+    
     func fetchCityList(params: [String: Any] ) {
-
-        cityListUseCase.getCityList(params: params).subscribe(onNext: { [self] response in
         
+        cityListUseCase.getCityList(params: params).subscribe(onNext: { [self] response in
+            
             if response != nil {
-           
                 self.cityList.onNext(response)
-
             }else{
                 print("error")
             }

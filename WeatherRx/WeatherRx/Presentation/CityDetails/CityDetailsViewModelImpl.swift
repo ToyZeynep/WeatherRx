@@ -54,7 +54,7 @@ class CityDetailsViewModelImpl: CityDetailsViewModel, CityDetailsViewModelInput,
         params = city.woeid!.toString()
         cityDetailsUseCase.getCityDetails(params: params).subscribe(onNext: { [self] response in
             if response.weatherDetails != nil {
-                print(response)
+              //  print(response)
                 self.cityDetailsResponse.onNext(response)
                 setCityDetail(cityDetailsResponse: response.weatherDetails!)
             } else {

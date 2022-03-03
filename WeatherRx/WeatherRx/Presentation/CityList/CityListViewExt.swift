@@ -50,7 +50,7 @@ extension CityListView {
     
     func setMovieListCollectionView()  {
         cityListContentView.addSubview(cityListCollectionView)
-        cityListCollectionView.setTop(equalTo: cityListToolBarLineView.bottomAnchor, constant: 5)
+        cityListCollectionView.setTop(equalTo: cityListToolBarLineView.bottomAnchor)
         cityListCollectionView.setLeft(equalTo: cityListContentView.leftAnchor)
         cityListCollectionView.setRight(equalTo: cityListContentView.rightAnchor)
         cityListCollectionView.setBottom(equalTo: cityListContentView.bottomAnchor)

@@ -15,24 +15,29 @@ class CityDetailsCell: UICollectionViewCell {
     
     lazy var cityDetailsCellContentView: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemMint
-        view.layer.cornerRadius = 10
-        view.clipsToBounds = true
+        view.backgroundColor = UIColor(rgb: 0x7DF9FF)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.masksToBounds = false
-        view.layer.shadowColor = UIColor.black.cgColor
-        view.layer.shadowOpacity = 1
-        view.layer.shadowOffset = .zero
-        view.layer.shadowRadius = 2
-        view.layer.shouldRasterize = true
-        view.layer.rasterizationScale = UIScreen.main.scale
+        //view.layer.masksToBounds = false
+        //view.layer.shadowColor = UIColor.black.cgColor
+        //view.layer.shadowOpacity = 1
+        //view.layer.shadowOffset = .zero
+        //view.layer.shadowRadius = 2
+        //view.layer.shouldRasterize = true
+        //view.layer.rasterizationScale = UIScreen.main.scale
+        let margins = UIEdgeInsets(top: 8, left: 4, bottom: 4, right: 8)
+        view.frame = contentView.frame.inset(by: margins)
+        view.layer.cornerRadius = 8
+        view.layer.borderColor = UIColor.systemMint.cgColor
+        view.layer.borderWidth = 0.5
+        view.clipsToBounds = true
+        
         return view
     }()
     
     lazy var cityDetailsCellImageView: UIImageView = {
-       let imageView = UIImageView()
+        let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
         imageView.layer.cornerRadius = 10
         imageView.layer.masksToBounds = true
         imageView.clipsToBounds = true
