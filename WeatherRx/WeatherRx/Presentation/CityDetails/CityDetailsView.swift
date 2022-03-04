@@ -35,11 +35,33 @@ class CityDetailsView : UIView {
         return imageView
     }()
 
+    lazy var cityDetailsWindImageView: UIImageView = {
+       let imageView = UIImageView()
+        imageView.image = UIImage(named: "wind")
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        imageView.layer.cornerRadius = 10
+        imageView.layer.masksToBounds = true
+        imageView.clipsToBounds = true
+        return imageView
+    }()
+    
+    lazy var cityDetailsHumidityImageView: UIImageView = {
+       let imageView = UIImageView()
+        imageView.image = UIImage(named: "humidity")
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        imageView.layer.cornerRadius = 10
+        imageView.layer.masksToBounds = true
+        imageView.clipsToBounds = true
+        return imageView
+    }()
+    
     lazy var cityDetailsTitleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 30)
+        label.textColor = .systemBlue
+        label.font = UIFont.systemFont(ofSize: 40)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -57,7 +79,7 @@ class CityDetailsView : UIView {
         let label = UILabel()
         label.textAlignment = .center
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 30)
+        label.font = UIFont.systemFont(ofSize: 40)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

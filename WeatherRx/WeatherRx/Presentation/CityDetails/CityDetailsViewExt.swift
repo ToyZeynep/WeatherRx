@@ -34,7 +34,9 @@ extension CityDetailsView {
         setUpDetailsTempetureLabel()
         setUpDetailsDateLabel()
         setUpDetailsWeekDayLabel()
+        setUpDetailsHumidityImageView()
         setUpDetailsHumidityLabel()
+        setUpDetailsWindImageView()
         setUpDetailsWindLabel()
     }
 
@@ -44,8 +46,8 @@ extension CityDetailsView {
         cityDetailsImageView.setLeft(equalTo: toolBarView.leftAnchor)
         cityDetailsImageView.setRight(equalTo: toolBarView.rightAnchor)
         cityDetailsImageView.setBottom(equalTo: toolBarView.bottomAnchor)
-        
     }
+    
     func setUpDetailsTitleLabel(){
         toolBarView.addSubview(cityDetailsTitleLabel)
         cityDetailsTitleLabel.setTop(equalTo: toolBarView.topAnchor , constant: 30)
@@ -57,7 +59,7 @@ extension CityDetailsView {
     
     func setUpDetailsTempetureLabel(){
         toolBarView.addSubview(cityDetailsTempetureLabel)
-        cityDetailsTempetureLabel.setTop(equalTo: cityDetailsTitleLabel.topAnchor , constant: 50)
+        cityDetailsTempetureLabel.setTop(equalTo: cityDetailsTitleLabel.bottomAnchor , constant: 50)
         cityDetailsTempetureLabel.setLeft(equalTo: toolBarView.leftAnchor)
         cityDetailsTempetureLabel.setRight(equalTo: toolBarView.rightAnchor)
         cityDetailsTempetureLabel.setHeight(height: 50)
@@ -66,7 +68,7 @@ extension CityDetailsView {
     
     func setUpDetailsDateLabel(){
         toolBarView.addSubview(cityDetailsDateLabel)
-        cityDetailsDateLabel.setTop(equalTo: cityDetailsTempetureLabel.topAnchor , constant: 50)
+        cityDetailsDateLabel.setTop(equalTo: cityDetailsTempetureLabel.bottomAnchor , constant: 50)
         cityDetailsDateLabel.setLeft(equalTo: toolBarView.leftAnchor)
         cityDetailsDateLabel.setRight(equalTo: toolBarView.rightAnchor)
         cityDetailsDateLabel.setHeight(height: 50)
@@ -75,26 +77,41 @@ extension CityDetailsView {
     
     func setUpDetailsWeekDayLabel(){
         toolBarView.addSubview(cityDetailsWeekDayLabel)
-        cityDetailsWeekDayLabel.setTop(equalTo: cityDetailsDateLabel.topAnchor , constant: 50)
+        cityDetailsWeekDayLabel.setTop(equalTo: cityDetailsDateLabel.bottomAnchor , constant: 50)
         cityDetailsWeekDayLabel.setLeft(equalTo: toolBarView.leftAnchor)
         cityDetailsWeekDayLabel.setRight(equalTo: toolBarView.rightAnchor)
         cityDetailsWeekDayLabel.setHeight(height: 50)
     
     }
     
+    func setUpDetailsHumidityImageView(){
+        toolBarView.addSubview(cityDetailsHumidityImageView)
+        cityDetailsHumidityImageView.setTop(equalTo: cityDetailsWeekDayLabel.bottomAnchor , constant: 50)
+        cityDetailsHumidityImageView.setLeft(equalTo: toolBarView.leftAnchor)
+        cityDetailsHumidityImageView.setHeight(height: 50)
+        cityDetailsHumidityImageView.setWidth(width: 50)
+    }
+    
     func setUpDetailsHumidityLabel(){
         toolBarView.addSubview(cityDetailsHumidityLabel)
-        cityDetailsHumidityLabel.setTop(equalTo: cityDetailsWeekDayLabel.topAnchor , constant: 50)
-        cityDetailsHumidityLabel.setLeft(equalTo: toolBarView.leftAnchor)
-        cityDetailsHumidityLabel.setRight(equalTo: toolBarView.rightAnchor)
+        cityDetailsHumidityLabel.setTop(equalTo: cityDetailsWeekDayLabel.bottomAnchor , constant: 50)
+        cityDetailsHumidityLabel.setLeft(equalTo: cityDetailsHumidityImageView.leftAnchor , constant: 10)
         cityDetailsHumidityLabel.setHeight(height: 50)
     
     }
     
+    func setUpDetailsWindImageView(){
+        toolBarView.addSubview(cityDetailsWindImageView)
+        cityDetailsWindImageView.setTop(equalTo: cityDetailsWeekDayLabel.bottomAnchor , constant: 50)
+        cityDetailsWindImageView.setLeft(equalTo: cityDetailsHumidityLabel.rightAnchor , constant: 120)
+        cityDetailsWindImageView.setWidth(width: 50)
+        cityDetailsWindImageView.setHeight(height: 50)
+    }
+    
     func setUpDetailsWindLabel(){
         toolBarView.addSubview(cityDetailsWindLabel)
-        cityDetailsWindLabel.setTop(equalTo: cityDetailsHumidityLabel.topAnchor , constant: 50)
-        cityDetailsWindLabel.setLeft(equalTo: toolBarView.leftAnchor)
+        cityDetailsWindLabel.setTop(equalTo: cityDetailsWeekDayLabel.bottomAnchor , constant: 50)
+        cityDetailsWindLabel.setLeft(equalTo: cityDetailsWindImageView.rightAnchor , constant: 10)
         cityDetailsWindLabel.setRight(equalTo: toolBarView.rightAnchor)
         cityDetailsWindLabel.setHeight(height: 50)
     

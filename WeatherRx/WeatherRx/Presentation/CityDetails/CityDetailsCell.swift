@@ -15,7 +15,7 @@ class CityDetailsCell: UICollectionViewCell {
     
     lazy var cityDetailsCellContentView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(rgb: 0x7DF9FF)
+        view.backgroundColor = .white
         view.translatesAutoresizingMaskIntoConstraints = false
         //view.layer.masksToBounds = false
         //view.layer.shadowColor = UIColor.black.cgColor
