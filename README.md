@@ -40,7 +40,7 @@ Versions I use:
 - `cocoapods-1.11.2` 
 
 ## Installation <a name="Installation"></a>
-- paste `git clone https://github.com/SaniyeToy/WeatherForecast.git` into terminal
+- paste `https://github.com/SaniyeToy/WeatherRx.git` into terminal
 - `pod install` is written to the file path of the application in the terminal and the application is run on xcode
  
 
