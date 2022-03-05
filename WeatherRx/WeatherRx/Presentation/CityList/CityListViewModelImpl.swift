@@ -52,4 +52,8 @@ class CityListViewModelImpl: CityListViewModel, CityListViewModelInput, CityList
             }
         }).disposed(by: disposeBag)
     }
+    
+    func navigateToFavorites()  {
+        router.trigger(.favoriteList)
+    }
 }

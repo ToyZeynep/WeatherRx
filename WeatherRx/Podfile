@@ -14,6 +14,8 @@ target 'WeatherRx' do
   pod 'XCoordinator/RxSwift', '~> 2.0'
   pod 'Kingfisher', '~> 5.0'
   pod 'Action'
+  pod 'RealmSwift'
+  pod 'SnackBar.swift'
   pod 'Material', '~> 3.1.0'
   pod 'SwiftGifOrigin', '~> 1.7.0'
 end

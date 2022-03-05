@@ -86,7 +86,26 @@ class CityListViewController: UIViewController, BindableType, UICollectionViewDe
             cell.cityListCellNameLabel.text = model.title
             cell.cityListCellImageView.kf.setImage(with: URL(string: imagesArr[self.counter]))
             counter = counter + 1
+            cell.cityListCellAddFavoriteButton.rx.tapGesture().when(.recognized).subscribe(onNext: {gesture in
+                let favoriteList = RealmHelper.sharedInstance.fetchFavoriteList().map { $0 }
+                if let position = favoriteList.firstIndex(where: {$0.woeid == model.woeid}){
+                    RealmHelper.sharedInstance.deleteFromDb(city: favoriteList[position])
+                    AppSnackBar.make(in: self.view, message: "\(model.title!) removed  to favorites ", duration: .custom(1.0)).show()
+                    cell.cityListCellAddFavoriteButton.backgroundColor = .clear
+                }else{
+                    RealmHelper.sharedInstance.addCharacterToFavorites(city: model)
+                    AppSnackBar.make(in: self.view, message: "\(model.title!) added to favorites", duration: .custom(1.0)).show()
+                    cell.cityListCellAddFavoriteButton.backgroundColor = .red
+                }
+            }).disposed(by: cell.disposeBag)
+            
+            favoriCityStatus(cell: cell, model: model)
+            
         } .disposed(by: disposeBag)
+        
+        cityListView.cityListFavoritesButton.rx.tapGesture().when(.recognized).subscribe(onNext: { gesture in
+            self.viewModel.navigateToFavorites()
+        }).disposed(by: disposeBag)
         
         cityListView.cityListCollectionView.rx.modelSelected(CityListResponse.self).bind(to: viewModel.input.selectedCity).disposed(by: disposeBag)
     }
@@ -106,6 +125,15 @@ class CityListViewController: UIViewController, BindableType, UICollectionViewDe
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
         }
         checkLocationPermission()
+    }
+    
+    func favoriCityStatus(cell: CityListCell, model: CityListResponse) {
+        let favoriteList = RealmHelper.sharedInstance.fetchFavoriteList().map { $0 }
+        if let position = favoriteList.firstIndex(where: {$0.woeid == model.woeid}){
+            cell.cityListCellAddFavoriteButton.backgroundColor = .red
+        } else {
+            cell.cityListCellAddFavoriteButton.backgroundColor = .clear
+        }
     }
     
     func checkLocationPermission() {

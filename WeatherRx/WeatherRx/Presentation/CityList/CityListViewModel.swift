@@ -28,6 +28,7 @@ protocol CityListViewModel {
     var output: CityListViewModelOutput { get }
     var storedProperties : CityListViewModelStoredProperties { get }
     func fetchCityList(params: [String: Any])
+    func navigateToFavorites() 
 }
 
 extension CityListViewModel where Self: CityListViewModelInput & CityListViewModelOutput & CityListViewModelStoredProperties {

@@ -19,7 +19,7 @@ class CityListView : UIView {
     
     lazy var toolbarView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(rgb: 0xF5F5F5)
+        view.backgroundColor = .white
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -31,11 +31,37 @@ class CityListView : UIView {
         return view
     }()
     
+    lazy var stackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [cityListSearchBar, cityListFavoritesButton])
+        stackView.axis = .horizontal
+        stackView.distribution = .fill
+        stackView.alignment = .center
+        stackView.spacing = 10
+        stackView.backgroundColor = UIColor(rgb: 0xF5F5F5)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+    
+    lazy var cityListFavoritesButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage(named: "favorite")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        button.tintColor = .black
+        button.imageEdgeInsets = EdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
+        button.setHeight(height: 40)
+        button.setWidth(width: 40)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.clipsToBounds = true
+        return button
+    }()
+    
     lazy var cityListSearchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.searchBarStyle = .default
         searchBar.placeholder = " Search City"
+        searchBar.subviews.first?.backgroundColor =  UIColor(rgb: 0xF5F5F5)
         searchBar.sizeToFit()
+        searchBar.layer.cornerRadius = 10.5
+        searchBar.layer.masksToBounds = true
         return searchBar
     }()
     

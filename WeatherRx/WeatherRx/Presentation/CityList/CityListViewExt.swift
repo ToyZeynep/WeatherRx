@@ -20,7 +20,7 @@ extension CityListView {
         
         setUpToolbarView()
         setUpCityListToolBarLineView()
-        setMovieListCollectionView()
+        setCityListCollectionView()
         
     }
     
@@ -33,13 +33,13 @@ extension CityListView {
     }
     
     func setUpSearchBar(){
-        toolbarView.addSubview(cityListSearchBar)
-        cityListSearchBar.setTop(equalTo: toolbarView.topAnchor)
-        cityListSearchBar.setLeft(equalTo: toolbarView.leftAnchor)
-        cityListSearchBar.setRight(equalTo: toolbarView.rightAnchor)
-        cityListSearchBar.setBottom(equalTo: toolbarView.bottomAnchor)
+        toolbarView.addSubview(stackView)
+        stackView.setTop(equalTo: toolbarView.topAnchor)
+        stackView.setLeft(equalTo: toolbarView.leftAnchor)
+        stackView.setBottom(equalTo: toolbarView.bottomAnchor)
+        stackView.setRight(equalTo: toolbarView.rightAnchor)
     }
-
+   
     func setUpCityListToolBarLineView() {
         cityListContentView.addSubview(cityListToolBarLineView)
         cityListToolBarLineView.setTop(equalTo:  toolbarView.bottomAnchor)
@@ -48,7 +48,7 @@ extension CityListView {
         cityListToolBarLineView.setHeight(height: 1)
     }
     
-    func setMovieListCollectionView()  {
+    func setCityListCollectionView()  {
         cityListContentView.addSubview(cityListCollectionView)
         cityListCollectionView.setTop(equalTo: cityListToolBarLineView.bottomAnchor)
         cityListCollectionView.setLeft(equalTo: cityListContentView.leftAnchor)

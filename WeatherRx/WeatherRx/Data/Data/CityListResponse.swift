@@ -7,13 +7,15 @@
 
 
 import Foundation
-struct CityListResponse: Codable {
+import RealmSwift
+
+ class CityListResponse: Object , Codable {
     
-    let distance : Int?
-    let title : String?
-    let location_type : String?
-    let woeid : Int?
-    let latt_long : String?
+    @objc dynamic var distance = 0
+    @objc dynamic var title : String?
+    @objc dynamic var location_type : String?
+    @objc dynamic var woeid = 0
+    @objc dynamic var latt_long : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -23,14 +25,4 @@ struct CityListResponse: Codable {
         case woeid = "woeid"
         case latt_long = "latt_long"
     }
-
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        distance = try values.decodeIfPresent(Int.self, forKey: .distance)
-        title = try values.decodeIfPresent(String.self, forKey: .title)
-        location_type = try values.decodeIfPresent(String.self, forKey: .location_type)
-        woeid = try values.decodeIfPresent(Int.self, forKey: .woeid)
-        latt_long = try values.decodeIfPresent(String.self, forKey: .latt_long)
-    }
-
 }

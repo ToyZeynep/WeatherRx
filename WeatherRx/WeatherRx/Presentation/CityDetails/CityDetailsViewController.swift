@@ -24,8 +24,8 @@ class CityDetailsViewController: UIViewController, BindableType, UICollectionVie
     var viewModel: CityDetailsViewModel!
     var cityDetails = [WeatherDetails]()
     var gridFlowLayout = GridFlowLayout()
-   
-        
+    
+    
     
     
     override func loadView() {
@@ -42,14 +42,11 @@ class CityDetailsViewController: UIViewController, BindableType, UICollectionVie
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
+      
         cityDetailsView.cityDetailsCollectionView.reloadData()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
+
     
     
     func bindViewModel() {

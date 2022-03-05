@@ -61,6 +61,11 @@ struct WeatherDetails : Codable {
         predictability = try values.decodeIfPresent(Int.self, forKey: .predictability)
     }
 
+    
+    func getDayDetails(woeId: String) -> String {
+        let date = applicable_date?.replacingOccurrences(of: "-", with: "/")
+        return woeId + "/" + date!
+    }
 }
 
 

@@ -17,6 +17,7 @@ extension CityListCell {
         cityListCellContentView.setBottom(equalTo: bottomAnchor, constant: -10)
         setCityImageView()
         setCityNameLabel()
+        setUpFavoriteButton()
         
     }
     
@@ -33,5 +34,12 @@ extension CityListCell {
         cityListCellNameLabel.setTop(equalTo: cityListCellImageView.topAnchor , constant: 20)
         cityListCellNameLabel.setRight(equalTo: cityListCellImageView.rightAnchor , constant: -10)
         cityListCellNameLabel.setLeft(equalTo: cityListCellImageView.leftAnchor , constant: 10)
+    }
+    func setUpFavoriteButton()  {
+        cityListCellContentView.addSubview(cityListCellAddFavoriteButton)
+        cityListCellAddFavoriteButton.setTop(equalTo: cityListCellImageView.topAnchor, constant: 10)
+        cityListCellAddFavoriteButton.setRight(equalTo: cityListCellImageView.rightAnchor, constant: -10)
+        cityListCellAddFavoriteButton.setWidth(width: 40)
+        cityListCellAddFavoriteButton.setHeight(height: 40)
     }
 }

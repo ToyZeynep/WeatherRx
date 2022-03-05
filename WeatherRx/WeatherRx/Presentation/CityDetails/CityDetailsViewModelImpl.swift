@@ -45,13 +45,13 @@ class CityDetailsViewModelImpl: CityDetailsViewModel, CityDetailsViewModelInput,
         self.router = router
         self.city = city
         cityTitle.onNext(city.title!)
-        cityWoeid.onNext(city.woeid!)
+        cityWoeid.onNext(city.woeid)
         fetchCityDetails()
     }
     
     func fetchCityDetails() {
         var params: String
-        params = city.woeid!.toString()
+        params = city.woeid.toString()
         cityDetailsUseCase.getCityDetails(params: params).subscribe(onNext: { [self] response in
             if response.weatherDetails != nil {
               //  print(response)

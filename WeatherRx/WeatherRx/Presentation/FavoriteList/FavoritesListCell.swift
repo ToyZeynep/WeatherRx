@@ -1,19 +1,20 @@
 //
-//  CityListCell.swift
+//  FavoritesListCell.swift
 //  WeatherRx
 //
-//  Created by MacOS on 1.03.2022.
+//  Created by MacOS on 5.03.2022.
 //
+
 
 import Foundation
 import UIKit
 import RxCocoa
 import RxSwift
-class CityListCell: UICollectionViewCell {
+class FavoriteListCell: UICollectionViewCell {
     
     var disposeBag: DisposeBag = DisposeBag()
     
-    lazy var cityListCellContentView: UIView = {
+    lazy var favoriteListCellContentView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
         view.layer.cornerRadius = 10
@@ -29,7 +30,7 @@ class CityListCell: UICollectionViewCell {
         return view
     }()
     
-    lazy var cityListCellImageView: UIImageView = {
+    lazy var favoriteListCellImageView: UIImageView = {
        let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
@@ -39,7 +40,7 @@ class CityListCell: UICollectionViewCell {
         return imageView
     }()
     
-    lazy var cityListCellNameLabel: UILabel = {
+    lazy var favoriteListCellNameLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
         label.textColor = .white
@@ -48,7 +49,7 @@ class CityListCell: UICollectionViewCell {
         return label
     }()
     
-    lazy var cityListCellAddFavoriteButton: UIButton = {
+    lazy var favoriteListCellDeleteFavoriteButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setImage(UIImage(named: "favorite1")?.withRenderingMode(.alwaysTemplate), for: .normal)
         button.tintColor = .white
@@ -67,7 +68,7 @@ class CityListCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.translatesAutoresizingMaskIntoConstraints = false
-        setUpCityListCellContentView()
+        setUpFavoriteListCellContentView()
     }
     
     required init?(coder aDecoder: NSCoder) {
