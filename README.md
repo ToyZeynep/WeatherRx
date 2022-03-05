@@ -26,6 +26,7 @@ WeatherForecast is a weather app that lists cities near your location and you ca
 - Repeated code blocks recommended for clean coding are combined in flexible methods
 - The operations to be done on the project created on Git are divided into branches and the project is completed over the branches
 - Care was taken to ensure that in-app method and variable naming are in English and comprehensible
+- Keeping and processing data in local memory with RealmSwift library
 
 ## Used Methods and Libraries <a name="UsedMethodsandLibraries"></a>
 - [Alamofire](https://github.com/Alamofire/Alamofire)
@@ -33,7 +34,9 @@ WeatherForecast is a weather app that lists cities near your location and you ca
 - [SwiftGifOrigin](https://cocoapods.org/pods/SwiftGifOrigin)
 
 ## Usage <a name="Usage"></a>
-The city you are in and nearby cities are listed on the home page of the weather forecast application. You can search by city name with the help of the search bar on the main page. Clicking on the desired cell in the list will take you to the city detail page. Daily forecast details and 1-week forecast are listed. Clicking on any day displays the details of that day.
+The city you are in and nearby cities are listed on the home page of the weather forecast application. You can search by city name with the help of the search bar on the main page. Clicking on the desired cell in the list will take you to the city detail page. Daily forecast details and 1-week forecast are listed. Clicking on any day displays the details of that day. 
+You can also add the cities you want to favorites in the local memory with the help of realm.
+
 ## Requiremonts <a name="Requiremonts"></a>
 Versions I use:
 - `ruby 2.6.3p62`
