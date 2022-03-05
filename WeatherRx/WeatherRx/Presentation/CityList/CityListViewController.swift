@@ -128,7 +128,6 @@ class CityListViewController: UIViewController, BindableType, UICollectionViewDe
             fatalError()
         }
     }
-    
 }
 
 

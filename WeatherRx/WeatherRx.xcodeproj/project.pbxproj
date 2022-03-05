@@ -11,6 +11,7 @@
 		221CD16527CF6F24001E13CB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221CD16427CF6F24001E13CB /* Extension.swift */; };
 		221CD16927CF7EF5001E13CB /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221CD16827CF7EF5001E13CB /* DateExtension.swift */; };
 		221CD16B27CFA3F5001E13CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221CD16A27CFA3F5001E13CB /* Constants.swift */; };
+		221D6B8E27D38BB7006F7355 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 221D6B8D27D38BB7006F7355 /* Settings.bundle */; };
 		222562B727D0B6F000931B15 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222562B627D0B6F000931B15 /* SplashViewController.swift */; };
 		222562B927D0B80500931B15 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222562B827D0B80500931B15 /* SplashView.swift */; };
 		222562BB27D0B82C00931B15 /* SplashViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222562BA27D0B82C00931B15 /* SplashViewExtension.swift */; };
@@ -55,6 +56,7 @@
 		221CD16427CF6F24001E13CB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		221CD16827CF7EF5001E13CB /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		221CD16A27CFA3F5001E13CB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		221D6B8D27D38BB7006F7355 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		222562B627D0B6F000931B15 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		222562B827D0B80500931B15 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		222562BA27D0B82C00931B15 /* SplashViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewExtension.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		227AA6C427CE654400B1CA7A = {
 			isa = PBXGroup;
 			children = (
+				221D6B8D27D38BB7006F7355 /* Settings.bundle */,
 				227AA6CF27CE654400B1CA7A /* WeatherRx */,
 				227AA6CE27CE654400B1CA7A /* Products */,
 				403E22DC815F348E9BBF8883 /* Pods */,
@@ -341,6 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				221D6B8E27D38BB7006F7355 /* Settings.bundle in Resources */,
 				227AA6DA27CE654500B1CA7A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
