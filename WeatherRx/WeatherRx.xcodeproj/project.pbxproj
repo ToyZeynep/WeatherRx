@@ -57,6 +57,8 @@
 		229E4D1627D3C3640062D76F /* FavoriteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229E4D1527D3C3640062D76F /* FavoriteListViewController.swift */; };
 		229E4D1827D3C3A50062D76F /* FavoritesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229E4D1727D3C3A50062D76F /* FavoritesListCell.swift */; };
 		229E4D1A27D3C4220062D76F /* FavoritesListCellExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229E4D1927D3C4220062D76F /* FavoritesListCellExt.swift */; };
+		229E4D1C27D3E76C0062D76F /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229E4D1B27D3E76C0062D76F /* ActivityIndicator.swift */; };
+		229E4D1E27D3E7B10062D76F /* load.gif in Resources */ = {isa = PBXBuildFile; fileRef = 229E4D1D27D3E7B10062D76F /* load.gif */; };
 		8A51560F2E7FD301C026A087 /* Pods_WeatherRx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C40C9922356E2FAAE4071B /* Pods_WeatherRx.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +115,8 @@
 		229E4D1527D3C3640062D76F /* FavoriteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewController.swift; sourceTree = "<group>"; };
 		229E4D1727D3C3A50062D76F /* FavoritesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListCell.swift; sourceTree = "<group>"; };
 		229E4D1927D3C4220062D76F /* FavoritesListCellExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListCellExt.swift; sourceTree = "<group>"; };
+		229E4D1B27D3E76C0062D76F /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		229E4D1D27D3E7B10062D76F /* load.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = load.gif; sourceTree = "<group>"; };
 		5D23E72C99E332726C968E36 /* Pods-WeatherRx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherRx.release.xcconfig"; path = "Target Support Files/Pods-WeatherRx/Pods-WeatherRx.release.xcconfig"; sourceTree = "<group>"; };
 		95C40C9922356E2FAAE4071B /* Pods_WeatherRx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherRx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D4783B51CCA7974D458E87 /* Pods-WeatherRx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherRx.debug.xcconfig"; path = "Target Support Files/Pods-WeatherRx/Pods-WeatherRx.debug.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 				227AA6ED27CE679600B1CA7A /* Network */,
 				227AA6D027CE654400B1CA7A /* AppDelegate.swift */,
 				227AA6D227CE654400B1CA7A /* SceneDelegate.swift */,
+				229E4D1D27D3E7B10062D76F /* load.gif */,
 				227AA6D927CE654500B1CA7A /* Assets.xcassets */,
 				227AA6DE27CE654500B1CA7A /* Info.plist */,
 			);
@@ -251,6 +256,7 @@
 				221CD16A27CFA3F5001E13CB /* Constants.swift */,
 				221D6B9E27D3B090006F7355 /* Realm.swift */,
 				221D6BA027D3B71C006F7355 /* SnackBar.swift */,
+				229E4D1B27D3E76C0062D76F /* ActivityIndicator.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -380,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				221D6B8E27D38BB7006F7355 /* Settings.bundle in Resources */,
+				229E4D1E27D3E7B10062D76F /* load.gif in Resources */,
 				227AA6DA27CE654500B1CA7A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +458,7 @@
 				222562C127D0BA1800931B15 /* AppCoordinator.swift in Sources */,
 				227AA70127CE6A0B00B1CA7A /* CityListViewModelImpl.swift in Sources */,
 				227AA72127CE901800B1CA7A /* CityDetailsViewModelImpl.swift in Sources */,
+				229E4D1C27D3E76C0062D76F /* ActivityIndicator.swift in Sources */,
 				221D6B9F27D3B090006F7355 /* Realm.swift in Sources */,
 				227AA6F827CE680100B1CA7A /* CityDetailsUseCase.swift in Sources */,
 				227AA72727CE904900B1CA7A /* CityDetailsCellExt.swift in Sources */,

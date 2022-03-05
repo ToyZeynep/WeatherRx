@@ -36,7 +36,7 @@ class CityListViewController: UIViewController, BindableType, UICollectionViewDe
             viewModel.fetchCityList(params: params)
         }
     }
-    
+    var timer = Timer()
     var counter = 0{
         didSet{
             if counter == 17{
@@ -52,10 +52,13 @@ class CityListViewController: UIViewController, BindableType, UICollectionViewDe
     }
     
     override func viewDidLoad() {
+        CustomLoader.instance.showLoaderView()
+        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(callme), userInfo: nil, repeats: false)
         registerCollectionView()
         cityListView.cityListSearchBar.delegate = self
         locationManager.delegate = self
         getLocation()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -72,6 +75,11 @@ class CityListViewController: UIViewController, BindableType, UICollectionViewDe
         super.viewDidDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
+    
+    @objc func callme() {
+        CustomLoader.instance.hideLoaderView()
+    }
+    
     
     
     func bindViewModel() {

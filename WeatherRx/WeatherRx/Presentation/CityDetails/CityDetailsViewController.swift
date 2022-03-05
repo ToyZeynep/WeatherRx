@@ -24,7 +24,7 @@ class CityDetailsViewController: UIViewController, BindableType, UICollectionVie
     var viewModel: CityDetailsViewModel!
     var cityDetails = [WeatherDetails]()
     var gridFlowLayout = GridFlowLayout()
-    
+    var timer = Timer()
     
     
     
@@ -34,6 +34,8 @@ class CityDetailsViewController: UIViewController, BindableType, UICollectionVie
     
     override func viewDidLoad() {
         registerCollectionView()
+        CustomLoader.instance.showLoaderView()
+        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(callme), userInfo: nil, repeats: false)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -46,7 +48,9 @@ class CityDetailsViewController: UIViewController, BindableType, UICollectionVie
         cityDetailsView.cityDetailsCollectionView.reloadData()
     }
     
-
+    @objc func callme() {
+        CustomLoader.instance.hideLoaderView()
+    }
     
     
     func bindViewModel() {

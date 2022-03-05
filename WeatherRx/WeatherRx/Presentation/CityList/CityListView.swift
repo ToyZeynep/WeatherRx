@@ -45,9 +45,9 @@ class CityListView : UIView {
     lazy var cityListFavoritesButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setImage(UIImage(named: "favorite")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        button.tintColor = .black
+        button.tintColor = .red
         button.imageEdgeInsets = EdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
-        button.setHeight(height: 40)
+        button.setHeight(height: 35)
         button.setWidth(width: 40)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.clipsToBounds = true
