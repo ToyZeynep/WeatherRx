@@ -17,7 +17,6 @@ extension Int
 {
     func toString() -> String
     {
-        var myString = String(self)
-        return myString
+		.init(self)
     }
 }

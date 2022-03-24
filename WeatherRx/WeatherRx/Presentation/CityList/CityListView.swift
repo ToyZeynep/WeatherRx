@@ -46,7 +46,6 @@ class CityListView : UIView {
         let button = UIButton(type: .custom)
         button.setImage(UIImage(named: "favorite")?.withRenderingMode(.alwaysTemplate), for: .normal)
         button.tintColor = .red
-        button.imageEdgeInsets = EdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
         button.setHeight(height: 35)
         button.setWidth(width: 40)
         button.translatesAutoresizingMaskIntoConstraints = false

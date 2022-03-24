@@ -44,12 +44,7 @@ class CityListViewModelImpl: CityListViewModel, CityListViewModelInput, CityList
     func fetchCityList(params: [String: Any] ) {
         
         cityListUseCase.getCityList(params: params).subscribe(onNext: { [self] response in
-            
-            if response != nil {
-                self.cityList.onNext(response)
-            }else{
-                print("error")
-            }
+            self.cityList.onNext(response)
         }).disposed(by: disposeBag)
     }
     

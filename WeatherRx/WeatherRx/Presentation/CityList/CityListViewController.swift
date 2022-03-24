@@ -137,7 +137,7 @@ class CityListViewController: UIViewController, BindableType, UICollectionViewDe
     
     func favoriCityStatus(cell: CityListCell, model: CityListResponse) {
         let favoriteList = RealmHelper.sharedInstance.fetchFavoriteList().map { $0 }
-        if let position = favoriteList.firstIndex(where: {$0.woeid == model.woeid}){
+        if favoriteList.contains(where: {$0.woeid == model.woeid}){
             cell.cityListCellAddFavoriteButton.backgroundColor = .red
         } else {
             cell.cityListCellAddFavoriteButton.backgroundColor = .clear

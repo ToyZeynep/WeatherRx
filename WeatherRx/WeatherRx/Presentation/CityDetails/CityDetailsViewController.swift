@@ -82,14 +82,16 @@ class CityDetailsViewController: UIViewController, BindableType, UICollectionVie
             cell.cityDetailsCellDateLabel.text = model.applicable_date?.toDateString(dateFormatter: dateFormatter, outputFormat: "dd MMMM")
             cell.cityDetailsCellWeekDayLabel.text = model.applicable_date?.toDateString(dateFormatter: dateFormatter, outputFormat: "EEEE")
             
-            cell.cityDetailsCellContentView.addTapGesture {
-                viewModel.output.date.onNext((model.applicable_date?.toDateString(dateFormatter: dateFormatter, outputFormat: "dd MMMM"))!)
-                viewModel.output.tempeture.onNext((model.the_temp?.toString())! + "°C")
-                viewModel.output.humidity.onNext("%" + (model.humidity?.toString())!)
-                viewModel.output.weekDay.onNext((model.applicable_date?.toDateString(dateFormatter: dateFormatter, outputFormat: "EEEE"))!)
-                viewModel.output.wind.onNext((model.wind_speed?.toString())! + " m/s")
-                viewModel.output.weatherStateName.onNext(model.weather_state_name!)
-                self.setGif(status: model.weather_state_name! , imageView: cityDetailsView.cityDetailsImageView)
+            cell.cityDetailsCellContentView.addTapGesture { [weak self] in
+                guard let self = self else { return }
+            
+                self.viewModel.output.date.onNext((model.applicable_date?.toDateString(dateFormatter: dateFormatter, outputFormat: "dd MMMM"))!)
+                self.viewModel.output.tempeture.onNext((model.the_temp?.toString())! + "°C")
+                self.viewModel.output.humidity.onNext("%" + (model.humidity?.toString())!)
+                self.viewModel.output.weekDay.onNext((model.applicable_date?.toDateString(dateFormatter: dateFormatter, outputFormat: "EEEE"))!)
+                self.viewModel.output.wind.onNext((model.wind_speed?.toString())! + " m/s")
+                self.viewModel.output.weatherStateName.onNext(model.weather_state_name!)
+                self.setGif(status: model.weather_state_name! , imageView: self.cityDetailsView.cityDetailsImageView)
             }
         }.disposed(by: disposeBag)
     }
